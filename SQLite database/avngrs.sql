@@ -5,9 +5,9 @@ CREATE TABLE
 	avngr (
 		id BIGINT NOT NULL,
 		name VARCHAR,
-		numberOfMovies NUMERIC,
+		number_of_movies NUMERIC,
 		friendly BOOLEAN,
-		lastMovieReleaseDate DATE,
+		last_movie_release_date DATE,
 		serial_number VARCHAR,
 		PRIMARY KEY (id)
 	);
@@ -17,9 +17,9 @@ CREATE TABLE
 		next_value BIGINT NOT NULL
 	);
 
-INSERT INTO avngr (id, name, numberOfMovies, friendly, lastMovieReleaseDate)
+INSERT INTO avngr (id, name, number_of_movies, friendly, last_movie_release_date)
 	VALUES (1, "Iron Man", 11, true, "2019-01-01");
-INSERT INTO avngr (id, name, numberOfMovies, friendly, lastMovieReleaseDate)
+INSERT INTO avngr (id, name, number_of_movies, friendly, last_movie_release_date)
 	VALUES (2, "Thor", 3, true, "2019-01-01");
 
 INSERT INTO hibernate_sequence (next_value) VALUES (3);
