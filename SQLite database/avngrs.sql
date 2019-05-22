@@ -14,7 +14,7 @@ CREATE TABLE
 
 CREATE TABLE
 	hibernate_sequence (
-		next_value BIGINT NOT NULL
+		next_val BIGINT NOT NULL
 	);
 
 INSERT INTO avngr (id, name, number_of_movies, friendly, last_movie_release_date)
@@ -22,4 +22,4 @@ INSERT INTO avngr (id, name, number_of_movies, friendly, last_movie_release_date
 INSERT INTO avngr (id, name, number_of_movies, friendly, last_movie_release_date)
 	VALUES (2, "Thor", 3, true, "2019-01-01 00:00:00.00");
 
-INSERT INTO hibernate_sequence (next_value) VALUES (3);
+INSERT INTO hibernate_sequence (next_val) VALUES (3);
