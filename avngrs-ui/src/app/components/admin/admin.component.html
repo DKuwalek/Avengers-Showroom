@@ -1,23 +1,27 @@
 <div class="container">
   <table class="table table-bordered table-inverse">
     <tr>
-      <th>Owner Name</th>
-      <th>Email</th>
-      <th>Model</th>
-      <th class="text-right">Purchase Price</th>
+      <th>Id</th>
+      <th>Name</th>
+      <th class="text-right">Number of movies</th>
+      <th class="text-right">Last movie release date</th>
+      <th>Friendly</th>
     </tr>
-    <tr *ngFor="let bike of bikes">
+    <tr *ngFor="let avenger of avengers">
       <td>
-        {{bike.name}}
+        {{avenger.id}}
       </td>
       <td>
-        {{bike.email}}
+        {{avenger.name}}
       </td>
       <td>
-        {{bike.model}}
+        {{avenger.numberOfMovies}}
       </td>
       <td class="text-right">
-        {{bike.purchasePrice}}
+        {{avenger.lastMovieReleaseDate}}
+      </td>
+      <td>
+        {{avenger.friendly}}
       </td>
     </tr>
   </table>
