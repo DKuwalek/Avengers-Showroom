@@ -6,6 +6,8 @@ const httpOptions = {
   headers: new HttpHeaders({'Content-type': 'application/json'})
 };
 
+const restEndpointAddress = '/server/api/v1/avngrs';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,6 +16,15 @@ export class AvngrsService {
   constructor(private http: HttpClient) { }
 
   getAvngrs() {
-    return this.http.get('/server/api/v1/avngrs');
+    return this.http.get(restEndpointAddress);
+  }
+
+  getAvngr(id: Number) {
+    return this.http.get(restEndpointAddress + id)
+  }
+
+  ceateAvngr(bike) {
+    let body = JSON.stringify(bike);
+    return this.http.put(restEndpointAddress, body, httpOptions);
   }
 }
