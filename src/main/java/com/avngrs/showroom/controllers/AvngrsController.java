@@ -3,6 +3,8 @@ package com.avngrs.showroom.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,7 +32,8 @@ public class AvngrsController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.OK)
-	public void create(@RequestBody Avngr avngr) {
+	public void create(@RequestBody Avngr avngr, HttpServletResponse response) {
+//		response.addHeader("Access-Control-Allow-Origin", "*");
 		avngrRepository.save(avngr);
 	}
 	
