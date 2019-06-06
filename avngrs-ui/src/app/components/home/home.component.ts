@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AvngrsService } from "../../services/avngrs.service";
-import { FormGroup, Validators, FormControl } from "@angular/forms";
+import { FormGroup, Validators, FormControl, ValidationErrors } from "@angular/forms";
 import { Observable } from 'rxjs';
 
 @Component({
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     this.avengerForm = new FormGroup({
       name: new FormControl('', Validators.required),
       friendly: new FormControl('', Validators.required),
-      // lastMovieReleaseDate: new FormControl('', Validators.required),
+      lastMovieReleaseDate: new FormControl('', Validators.required),
       numberOfMovies: new FormControl('', Validators.required)
     })
   }
@@ -43,7 +43,16 @@ export class HomeComponent implements OnInit {
         }
       )
     } else {
-      this.validMessage = 'Errors in the form!'
+      this.validMessage = 'Errors in the form!';
+      Object.keys(this.avengerForm.controls).forEach(key => {
+
+        const controlErrors: ValidationErrors = this.avengerForm.get(key).errors;
+        if (controlErrors != null) {
+              Object.keys(controlErrors).forEach(keyError => {
+                console.log('Key control: ' + key + ', keyError: ' + keyError + ', err value: ', controlErrors[keyError]);
+              });
+            }
+          });
     }
 
   }
