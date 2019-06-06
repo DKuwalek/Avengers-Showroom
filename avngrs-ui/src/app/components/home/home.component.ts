@@ -12,21 +12,24 @@ export class HomeComponent implements OnInit {
 
   avengerForm: FormGroup;
   validMessage: String = '';
-
+  booleans: String[] = [
+    'true',
+    'false'
+  ];
 
   constructor(private angrsService : AvngrsService) { }
 
   ngOnInit() {
     this.avengerForm = new FormGroup({
       name: new FormControl('', Validators.required),
-      // friendly: new FormControl('', Validators.required),
+      friendly: new FormControl('', Validators.required),
+      // lastMovieReleaseDate: new FormControl('', Validators.required),
       numberOfMovies: new FormControl('', Validators.required)
     })
   }
 
   submitRegistration(){
     if(this.avengerForm.valid){
-      // this.avengerForm.setValue({'friendly': true});
       this.validMessage= 'Registration is ok'
       this.angrsService.ceateAvngr(this.avengerForm.value).subscribe(
         data => {

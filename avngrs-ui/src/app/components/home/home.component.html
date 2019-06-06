@@ -1,26 +1,32 @@
+<h2>Registration form</h2>
 <div class="container">
   <form [formGroup]="avengerForm" (ngSubmit)="submitRegistration()" novalidate>
     <div *ngIf="validMessage != ''">
       <h3 class="has-info">{{validMessage}}</h3>
     </div>
     <div class="form-group">
-      <label>Avngr Name</label>
+      <label>Avngr Name </label>
       <input type="text" class="form-control" formControlName="name" required autofocus/>
     </div>
     <div class="form-group">
-      <label>Number of movies</label>
-      <input type="text" class="form-control" formControlName="numberOfMovies" required/>
+      <label>Number of movies </label>
+      <input type="number" class="form-control" formControlName="numberOfMovies" required/>
     </div>
     <!-- <div class="form-group">
-      <label>Is Friendly</label>
+      <label>Last movie release date </label>
+      <input type="date" class="form-control" formControlName="numberOfMovies" required/>
+    </div> -->
+    <div class="form-group">
+      <label>Is Friendly </label>
       <select class="form-control" formControlName="friendly" required>
-        <option value="">Please select a bike</option>
-        <option *ngFor="let m of booleans"
-                [value]="m">
-                {{m}}
+        <option value="">Please select if the character is friendly</option>
+        <option *ngFor="let b of booleans"
+                [value]="b">
+                {{b}}
         </option>
       </select>
-    </div> -->
+    </div>
     <button type="submit" class="btn btn-primary" >Submit</button>
   </form>
 </div>
+<hr/>
