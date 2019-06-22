@@ -9,6 +9,9 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 
+  },
+  {
     path : 'admin',
     component: AdminComponent
   }
