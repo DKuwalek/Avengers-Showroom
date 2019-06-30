@@ -7,7 +7,7 @@ const httpOptions = {
     'Content-type': 'application/json'})
 };
 
-const restEndpointAddress = '/server/api/v1/avngrs';
+const restEndpointAddress = '/server/api/v1/avngrs/';
 const putEndpoint = 'localhost:8080/api/v1/avngrs'
 
 @Injectable({
