@@ -2,7 +2,6 @@
 <div class="container">
   <table class="table table-bordered table-inverse">
     <tr>
-      <th>Id</th>
       <th>Name</th>
       <th class="text-right">Number of movies</th>
       <th class="text-right">Last movie release date</th>
@@ -10,10 +9,7 @@
     </tr>
     <tr *ngFor="let avenger of avengers">
       <td>
-        <a [routerLink]="['/admin/view', avenger.id]" >{{avenger.id}}</a>
-      </td>
-      <td>
-        {{avenger.name}}
+        <a [routerLink]="['/admin/view', avenger.id]" >{{avenger.name}}</a>
       </td>
       <td>
         {{avenger.numberOfMovies}}
