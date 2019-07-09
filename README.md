@@ -2,7 +2,7 @@
 
 Fundamentals of the project were built thanks to Plural Sight tutorial https://www.pluralsight.com/courses/building-first-app-with-spring-boot-angularjs
 
-# Startup
+## Startup
 To start the ui project written in in Angular open the terminal and navigate to avngrs-ui diectory.
 Start the server with 'npm start' command
 
