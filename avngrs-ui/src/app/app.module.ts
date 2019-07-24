@@ -10,13 +10,15 @@ import { AvngrsService } from "./services/avngrs.service";
 import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
+import { CallbackComponent } from './components/callback/callback.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     HomeComponent,
-    ViewRegistrationComponent
+    ViewRegistrationComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
