@@ -18,14 +18,19 @@ export class AvngrsService {
   constructor(private http: HttpClient) { }
 
   getAvngrs() {
-    return this.http.get(restEndpointAddress);
+    let token = localStorage.getItem('access_token');
+    return this.http.get(restEndpointAddress,
+      {headers: new HttpHeaders().set('Authorization', 'Bearer ' + token)});
   }
 
   getAvngr(id: Number) {
-    return this.http.get(restEndpointAddress + id)
+    let token = localStorage.getItem('access_token');
+    return this.http.get(restEndpointAddress + id,
+      {headers: new HttpHeaders().set('Authorization', 'Bearer ' + token)})
   }
 
   ceateAvngr(bike) {
+    let token = localStorage.getItem('access_token');
     let body = JSON.stringify(bike);
     return this.http.post(restEndpointAddress, body, httpOptions);
   }
