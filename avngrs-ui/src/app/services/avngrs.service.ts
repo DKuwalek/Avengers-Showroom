@@ -7,7 +7,9 @@ const httpOptions = {
     'Content-type': 'application/json'})
 };
 
-const restEndpointAddress = '/server/api/v1/avngrs/';
+// const restEndpointAddress = '/server/api/v1/avngrs/';
+const restEndpointAddress = 'http://5d8de5c5370f02001405c5e5.mockapi.io/maniana/mock-task-list';
+
 const putEndpoint = 'localhost:8080/api/v1/avngrs'
 
 @Injectable({
