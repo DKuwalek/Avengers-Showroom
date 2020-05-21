@@ -13,3 +13,6 @@ Start the server with a command:
 To start the backend, navigate to root of the project an execute command:
 
 `mvn spring-boot:run`
+
+### Live demo
+https://quiz-spring.herokuapp.com/
